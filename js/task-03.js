@@ -7,9 +7,16 @@
  */
 
 const findBestEmployee = function (employees) {
-  // твой код
+  const employeeNames = Object.keys(employees);
+  //   console.table(employeeNames);
+  const employeeTask = Object.values(employees);
+  //   console.table(employeeTask);
+  const maxValue = Math.max(...employeeTask);
+  //   console.log(maxValue);
+  const indexMaxValue = employeeTask.indexOf(maxValue);
+  //   console.log(indexMaxValue);
+  return employeeNames[indexMaxValue];
 };
-
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
